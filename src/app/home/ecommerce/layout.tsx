@@ -1,6 +1,6 @@
 "use client";
 
-import SidebarEcommerce from "@/features/pages/Ecommerce/components/SidebarEcommerce/SidebarEcommerce";
+import Sidebar from "@/features/ecommerce/components/Sidebar";
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
 
@@ -24,7 +24,7 @@ function ContentWrapper({
 }) {
   return (
     <div className="flex flex-1">
-      {showSidebar && <SidebarEcommerce />}
+      {showSidebar && <Sidebar />}
       <div className="bg-white relative flex-1 flex-col overflow-y-auto overflow-x-hidden">
         <main className="flex-1 overflow-y-auto no-scrollbar">{children}</main>
       </div>

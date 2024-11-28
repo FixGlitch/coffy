@@ -1,19 +1,24 @@
-import { ReactNode } from "react";
+"use client";
 
-export default function DashboardLayout({ children }: { children?: ReactNode }) {
+import { useState } from "react";
+import Sidebar from "@/features/dashboard/components/Sidebar";
+import Header from "@/features/dashboard/components/Header";
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
-    <div className="flex flex-col min-h-screen no-scrollbar">
-      <aside className="sidebar">
-        <nav>
-          <a href="/dashboard">Home</a>
-          <a href="/dashboard/products">Products</a>
-          <a href="/dashboard/users">Users</a>
-          <a href="/dashboard/orders">Orders</a>
-          <a href="/dashboard/sales">Sales</a>
-          <a href="/dashboard/settings">Settings</a>
-        </nav>
-      </aside>
-      <main className="dashboard-content">{children}</main>
+    <div className="flex h-screen overflow-hidden">
+      <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+      <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
+        <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+        <main className="p-1 md:p-2 2xl:p-2 overflow-y-auto no-scrollbar">
+          {children}
+        </main>
+      </div>
     </div>
   );
 }

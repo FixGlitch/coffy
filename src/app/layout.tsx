@@ -4,7 +4,7 @@ import { AuthProvider } from "@/providers/AuthProvider";
 import { QueryClientProvider } from "@/providers/QueryClientProvider";
 import Loader from "@/components/common/Loader";
 import React, { useState, useEffect } from "react";
-import { useRouter } from "next/navigation"; 
+import { useRouter } from "next/navigation";
 import "../styles/globals.css";
 
 export default function RootLayout({
@@ -33,7 +33,7 @@ function AppProviders({ children }: { children: React.ReactNode }) {
 
 function MainContent({ children }: { children?: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
-  const router = useRouter();  // Initialize useRouter
+  const router = useRouter();
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 2000);
@@ -41,7 +41,6 @@ function MainContent({ children }: { children?: React.ReactNode }) {
   }, []);
 
   useEffect(() => {
-    // Redirect to /home if on root /
     if (window.location.pathname === "/") {
       router.push("/home");
     }

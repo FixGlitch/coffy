@@ -19,7 +19,7 @@ export function Navbar() {
             src="/Logo.png"
             width={100}
             height={100}
-            alt="Colada Coffee Logo"
+            alt="Coffy"
           />
         </Link>
 

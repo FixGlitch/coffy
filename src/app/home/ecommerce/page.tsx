@@ -1,9 +1,9 @@
-import HomeEcommerce from "@/features/pages/Ecommerce/HomeEcommerce";
+import Ecommerce from "@/features/ecommerce/components/Ecommerce";
 
 export default function EcommercePage() {
   return (
     <div>
-      <HomeEcommerce />
+      <Ecommerce />
     </div>
   );
 }

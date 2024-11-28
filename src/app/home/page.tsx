@@ -1,6 +1,6 @@
 "use client";
 
-import Landing from "@/features/pages/Landing/Landing";
+import Landing from "@/features/landing/components/Landing";
 
 export default function LandingPage() {
   return (

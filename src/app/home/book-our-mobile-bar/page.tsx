@@ -1,4 +1,5 @@
-import BookOurMobileBar from "@/features/pages/Landing/BookOurMobileBar";
+import BookOurMobileBar from "@/features/landing/components/BookOurMobileBar";
+
 
 export default function BookOurMobileBarPage() {
   return (

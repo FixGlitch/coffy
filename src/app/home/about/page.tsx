@@ -1,4 +1,4 @@
-import AboutUs from "@/features/pages/Landing/AboutUs";
+import AboutUs from "@/features/landing/components/AboutUs";
 
 export default function AboutPage() {
   return (
