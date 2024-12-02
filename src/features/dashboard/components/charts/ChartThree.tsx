@@ -1,3 +1,5 @@
+"use client";
+
 import { ApexOptions } from "apexcharts";
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
@@ -66,7 +68,12 @@ export default function ChartThree() {
       series: [65, 34, 12, 56],
     }));
   };
-  handleReset;
+
+  // Example of using handleReset in case of dropdown change or any other event
+  const handleDropdownChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    // Reset the chart data on dropdown change
+    handleReset();
+  };
 
   return (
     <div className="col-span-12 rounded-sm border border-coffee-400 bg-coffee-50 px-5 pt-7.5 pb-5 shadow-default sm:px-7.5 xl:col-span-5">
@@ -82,6 +89,7 @@ export default function ChartThree() {
               name=""
               id=""
               className="relative z-20 inline-flex appearance-none bg-transparent py-1 pl-3 pr-8 text-sm font-medium outline-none"
+              onChange={handleDropdownChange} // Add onChange handler
             >
               <option value="">Monthly</option>
               <option value="">Yearly</option>
@@ -140,7 +148,7 @@ export default function ChartThree() {
             <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-coffee-600"></span>
             <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
               <span> Mobile </span>
-              <span> 45% </span>
+              <span> 12% </span>
             </p>
           </div>
         </div>
@@ -149,7 +157,7 @@ export default function ChartThree() {
             <span className="mr-2 block h-3 w-full max-w-3 rounded-full bg-coffee-400"></span>
             <p className="flex w-full justify-between text-sm font-medium text-black dark:text-white">
               <span> Unknown </span>
-              <span> 12% </span>
+              <span> 56% </span>
             </p>
           </div>
         </div>

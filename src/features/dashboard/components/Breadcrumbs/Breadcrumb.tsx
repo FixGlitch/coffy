@@ -13,7 +13,7 @@ const BreadcrumbComponent = () => {
   const pathSegments = pathname.split("/").filter(Boolean);
 
   return (
-    <div className="flex sm:flex-row sm:items-center sm:justify-between px-4 pb-8">
+    <div className="flex sm:flex-row sm:items-center sm:justify-between pb-8">
       <BreadcrumbHeader />
       <Breadcrumb>
         {pathSegments.map((segment, index) => {

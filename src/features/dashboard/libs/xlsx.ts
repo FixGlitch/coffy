@@ -2,6 +2,7 @@ import xlsx, { IJsonSheet } from "json-as-xlsx";
 import { salesBreakdown } from "../constants/sales-breakdown";
 import { salesByCategory } from "../constants/sales-by-category";
 import { topPerformingSalesPeople } from "../constants/top-performing-sales-people";
+import { dailyRevenue } from "../constants/daily-revenue";
 
 function generateExcel(
   sheetName: string,
@@ -80,4 +81,58 @@ export function downloadTopPerformingSalesPeople() {
     columns,
     "Top Performing Sales People Excel"
   );
+}
+
+export function downloadDailyRevenue() {
+  const columns: IJsonSheet[] = [
+    {
+      sheet: "Daily Revenue",
+      columns: [
+        { label: "ID", value: "id" },
+        {
+          label: "Hour",
+          value: (row) =>
+            new Date(row.hour as string).toLocaleTimeString([], {
+              hour: "2-digit",
+              minute: "2-digit",
+            }),
+        },
+        {
+          label: "Product",
+          value: (row) => {
+            if (Array.isArray(row.products)) {
+              return row.products
+                .map(
+                  (product) =>
+                    `${product.quantity}x ${product.name} ($${product.price.toFixed(2)})`
+                )
+                .join(", ");
+            }
+            return "";
+          },
+        },
+        { label: "Units Sold", value: "amount" },
+        { label: "Total Revenue ($)", value: "total" },
+        { label: "Payment Method", value: "payment_method" },
+        { label: "Category", value: "category" },
+        {
+          label: "Date of Sale",
+          value: (row) => new Date(row.date as string).toLocaleDateString(),
+        },
+      ],
+      content: dailyRevenue.map((row) => ({
+        ...row,
+        products: Array.isArray(row.products)
+          ? row.products
+              .map(
+                (product) =>
+                  `${product.quantity}x ${product.name} ($${product.price.toFixed(2)})`
+              )
+              .join(", ")
+          : "",
+      })),
+    },
+  ];
+
+  generateExcel("Daily Revenue Report", columns, "Daily Revenue Excel");
 }

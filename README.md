@@ -108,23 +108,23 @@ Este es el **Dashboard de Gestión** para una cafetería. A continuación se pre
 menu
 ├── dashboard
 │   ├── home                    # Página de inicio con información general.
-│   ├── daily sales             # Visualización de las ventas realizadas en el día actual.
-│   ├── top selling products    # Muestra los productos que más se venden en la cafetería.
-│   ├── sales performance       # Información detallada sobre el rendimiento de las ventas (diarias, semanales, mensuales).
-│   ├── inventory status        # Muestra el estado del inventario en tiempo real, incluyendo productos agotados.
-│   ├── employee performance    # Monitoreo del desempeño de los empleados (ventas, horas trabajadas, etc.).
-│   ├── customer analysis       # Información sobre los clientes frecuentes, preferencias y tendencias de compra.
-│   ├── daily revenue           # Ingresos generados por las ventas durante el día actual.
-│   ├── trend analysis          # Análisis de tendencias en ventas, inventario y clientes.
-│   ├── actionable insights     # Recomendaciones automáticas basadas en los datos para optimizar las operaciones.
-│   ├── audit logs              # Registros de auditoría sobre actividades realizadas en el sistema.
-│   ├── access control          # Control de acceso basado en roles y usuarios.
-│   ├── two-factor authentication # Implementación de autenticación en dos pasos para mayor seguridad.
-│   ├── predictive analytics    # Análisis predictivo de ventas, inventarios y comportamiento de clientes.
-│   ├── sustainability metrics  # Métricas de sostenibilidad (uso de recursos, desechos, etc.).
-│   ├── customer segmentation   # Segmentación de clientes basada en comportamientos y características.
-│   ├── customer loyalty dashboard # Panel de fidelización de clientes con puntos acumulados y redimidos.
-│   └── social responsibility initiatives # Iniciativas de responsabilidad social de la cafetería.
+│       ├── daily sales             # Visualización de las ventas realizadas en el día actual.
+│       ├── top selling products    # Muestra los productos que más se venden en la cafetería.
+│       ├── sales performance       # Información detallada sobre el rendimiento de las ventas (diarias, semanales, mensuales).
+│       ├── inventory status        # Muestra el estado del inventario en tiempo real, incluyendo productos agotados.
+│       ├── employee performance    # Monitoreo del desempeño de los empleados (ventas, horas trabajadas, etc.).
+│       ├── customer analysis       # Información sobre los clientes frecuentes, preferencias y tendencias de compra.
+│       ├── daily revenue           # Ingresos generados por las ventas durante el día actual.
+│       ├── trend analysis          # Análisis de tendencias en ventas, inventario y clientes.
+│       ├── actionable insights     # Recomendaciones automáticas basadas en los datos para optimizar las operaciones.
+│       ├── audit logs              # Registros de auditoría sobre actividades realizadas en el sistema.
+│       ├── access control          # Control de acceso basado en roles y usuarios.
+│       ├── two-factor authentication # Implementación de autenticación en dos pasos para mayor seguridad.
+│       ├── predictive analytics    # Análisis predictivo de ventas, inventarios y comportamiento de clientes.
+│       ├── sustainability metrics  # Métricas de sostenibilidad (uso de recursos, desechos, etc.).
+│       ├── customer segmentation   # Segmentación de clientes basada en comportamientos y características.
+│       ├── customer loyalty dashboard # Panel de fidelización de clientes con puntos acumulados y redimidos.
+│       └── social responsibility initiatives # Iniciativas de responsabilidad social de la cafetería.
 ├── user management
 │   ├── user list               # Lista con todos los usuarios registrados en el sistema.
 │   ├── user details            # Detalles de un usuario específico.
