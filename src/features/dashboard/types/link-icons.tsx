@@ -41,26 +41,27 @@ import {
 
 export const SubIcons: { [key: string]: JSX.Element } = {
   // Mapeo de iconos para la gestión del dashboard
-  "/dashboard": <Home className="h-5 w-5" />,
-  "/dashboard/daily-sales": <BarChart className="h-5 w-5" />,
-  "/dashboard/daily-revenue": <ShoppingCart className="h-5 w-5" />,
-  "/dashboard/top-selling-products": <TrendingUp className="h-5 w-5" />,
-  "/dashboard/sales-performance": <BarChart2 className="h-5 w-5" />,
-  "/dashboard/trend-analysis": <TrendingUp className="h-5 w-5" />,
-  "/dashboard/inventory-status": <Box className="h-5 w-5" />,
-  "/dashboard/employee-performance": <UserCog className="h-5 w-5" />,
-  "/dashboard/customer-analysis": <Users className="h-5 w-5" />,
-  "/dashboard/customer-segmentation": <Users className="h-5 w-5" />,
-  "/dashboard/customer-loyalty-dashboard": <Gift className="h-5 w-5" />,
-  "/dashboard/actionable-insights": <FileText className="h-5 w-5" />,
-  "/dashboard/predictive-analytics": <BarChart2 className="h-5 w-5" />,
-  "/dashboard/audit-logs": <FileText className="h-5 w-5" />,
-  "/dashboard/access-control": <ShieldCheck className="h-5 w-5" />,
-  "/dashboard/two-factor-authentication": <ShieldCheck className="h-5 w-5" />,
-  "/dashboard/sustainability-metrics": <Leaf className="h-5 w-5" />,
-  "/dashboard/social-responsibility-initiatives": (
+  "/dashboard/home": <Home className="h-5 w-5" />,
+  "/dashboard/home/daily-sales": <BarChart className="h-5 w-5" />,
+  "/dashboard/home/daily-revenue": <ShoppingCart className="h-5 w-5" />,
+  "/dashboard/home/top-selling-products": <TrendingUp className="h-5 w-5" />,
+  "/dashboard/home/sales-performance": <BarChart2 className="h-5 w-5" />,
+  "/dashboard/home/trend-analysis": <TrendingUp className="h-5 w-5" />,
+  "/dashboard/home/inventory-status": <Box className="h-5 w-5" />,
+  "/dashboard/home/employee-performance": <UserCog className="h-5 w-5" />,
+  "/dashboard/home/customer-analysis": <Users className="h-5 w-5" />,
+  "/dashboard/home/customer-segmentation": <Users className="h-5 w-5" />,
+  "/dashboard/home/customer-loyalty-dashboard": <Gift className="h-5 w-5" />,
+  "/dashboard/home/actionable-insights": <FileText className="h-5 w-5" />,
+  "/dashboard/home/predictive-analytics": <BarChart2 className="h-5 w-5" />,
+  "/dashboard/home/audit-logs": <FileText className="h-5 w-5" />,
+  "/dashboard/home/access-control": <ShieldCheck className="h-5 w-5" />,
+  "/dashboard/home/two-factor-authentication": <ShieldCheck className="h-5 w-5" />,
+  "/dashboard/home/sustainability-metrics": <Leaf className="h-5 w-5" />,
+  "/dashboard/home/social-responsibility-initiatives": (
     <GitPullRequest className="h-5 w-5" />
   ),
+  
   // Mapeo de iconos para la gestión de usuarios
   "/dashboard/user-management/user-list": <Users className="h-5 w-5" />,
   "/dashboard/user-management/user-details": <User className="h-5 w-5" />,

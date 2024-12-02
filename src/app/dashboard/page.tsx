@@ -1,9 +1,7 @@
-import HomeDashboard from "@/features/dashboard/components/HomeDashboard";
+import { redirect } from "next/navigation";
 
-export default function DashboardHome() {
-  return (
-    <div>
-      <HomeDashboard />
-    </div>
-  );
-}
+const DashboardHome = () => {
+  return redirect("/dashboard/home");
+};
+
+export default DashboardHome;

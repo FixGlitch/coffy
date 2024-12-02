@@ -1,30 +1,45 @@
 export const dashboardLinks = [
-  { name: "Home", href: "/dashboard" },
-  { name: "Daily Sales", href: "/dashboard/daily-sales" },
-  { name: "Daily Revenue", href: "/dashboard/daily-revenue" },
-  { name: "Top Selling Products", href: "/dashboard/top-selling-products" },
-  { name: "Sales Performance", href: "/dashboard/sales-performance" },
-  { name: "Trend Analysis", href: "/dashboard/trend-analysis" },
-  { name: "Inventory Status", href: "/dashboard/inventory-status" },
-  { name: "Employee Performance", href: "/dashboard/employee-performance" },
-  { name: "Customer Analysis", href: "/dashboard/customer-analysis" },
-  { name: "Customer Segmentation", href: "/dashboard/customer-segmentation" },
+  { name: "Home", href: "/dashboard/home" },
+  { name: "Daily Sales", href: "/dashboard/home/daily-sales" },
+  { name: "Daily Revenue", href: "/dashboard/home/daily-revenue" },
+  {
+    name: "Top Selling Products",
+    href: "/dashboard/home/top-selling-products",
+  },
+  { name: "Sales Performance", href: "/dashboard/home/sales-performance" },
+  { name: "Trend Analysis", href: "/dashboard/home/trend-analysis" },
+  { name: "Inventory Status", href: "/dashboard/home/inventory-status" },
+  {
+    name: "Employee Performance",
+    href: "/dashboard/home/employee-performance",
+  },
+  { name: "Customer Analysis", href: "/dashboard/home/customer-analysis" },
+  {
+    name: "Customer Segmentation",
+    href: "/dashboard/home/customer-segmentation",
+  },
   {
     name: "Customer Loyalty Dashboard",
-    href: "/dashboard/customer-loyalty-dashboard",
+    href: "/dashboard/home/customer-loyalty-dashboard",
   },
-  { name: "Actionable Insights", href: "/dashboard/actionable-insights" },
-  { name: "Predictive Analytics", href: "/dashboard/predictive-analytics" },
-  { name: "Audit Logs", href: "/dashboard/audit-logs" },
-  { name: "Access Control", href: "/dashboard/access-control" },
+  { name: "Actionable Insights", href: "/dashboard/home/actionable-insights" },
+  {
+    name: "Predictive Analytics",
+    href: "/dashboard/home/predictive-analytics",
+  },
+  { name: "Audit Logs", href: "/dashboard/home/audit-logs" },
+  { name: "Access Control", href: "/dashboard/home/access-control" },
   {
     name: "Two-Factor Authentication",
-    href: "/dashboard/two-factor-authentication",
+    href: "/dashboard/home/two-factor-authentication",
   },
-  { name: "Sustainability Metrics", href: "/dashboard/sustainability-metrics" },
+  {
+    name: "Sustainability Metrics",
+    href: "/dashboard/home/sustainability-metrics",
+  },
   {
     name: "Social Responsibility Initiatives",
-    href: "/dashboard/social-responsibility-initiatives",
+    href: "/dashboard/home/social-responsibility-initiatives",
   },
 ];
 

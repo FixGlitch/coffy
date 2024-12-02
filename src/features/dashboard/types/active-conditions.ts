@@ -1,5 +1,5 @@
 export const dashboardPath = (pathname: string): boolean => {
-  const basePath = "/dashboard";
+  const basePath = "/dashboard/home";
   return pathname === basePath || pathname.startsWith(`${basePath}/`);
 };
 

@@ -32,8 +32,8 @@ const SidebarLinkGroup = ({
   return (
     <li>
       <div
-        className={`cursor-pointer group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black font-allerta duration-300 ease-in-out hover:bg-coffee-400 ${
-          isActive && "bg-coffee-400"
+        className={`cursor-pointer group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black font-allerta duration-300 ease-in-out hover:bg-coffee-200 ${
+          isActive && "bg-coffee-300"
         }`}
         onClick={(e) => {
           e.preventDefault();
