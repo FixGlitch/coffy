@@ -3,6 +3,7 @@ import { salesBreakdown } from "../constants/sales-breakdown";
 import { salesByCategory } from "../constants/sales-by-category";
 import { topPerformingSalesPeople } from "../constants/top-performing-sales-people";
 import { dailyRevenue } from "../constants/daily-revenue";
+import { topSellingProducts } from "../constants/top-shelling-products";
 
 function generateExcel(
   sheetName: string,
@@ -136,3 +137,27 @@ export function downloadDailyRevenue() {
 
   generateExcel("Daily Revenue Report", columns, "Daily Revenue Excel");
 }
+
+export function downloadTopSellingProducts() {
+  const columns: IJsonSheet[] = [
+    {
+      sheet: "Top Selling Products",
+      columns: [
+        { label: "ID", value: "id" },
+        { label: "Product Name", value: "name" },
+        { label: "Category", value: "category" },
+        { label: "Units Sold", value: "sold_units" },
+        { label: "Image URL", value: "image" },
+      ],
+      content: topSellingProducts,
+    },
+  ];
+
+  generateExcel(
+    "Top Selling Products",
+    columns,
+    "Top Selling Products Excel"
+  );
+}
+
+
