@@ -4,6 +4,7 @@ import { salesByCategory } from "../constants/sales-by-category";
 import { topPerformingSalesPeople } from "../constants/top-performing-sales-people";
 import { dailyRevenue } from "../constants/daily-revenue";
 import { topSellingProducts } from "../constants/top-shelling-products";
+import { salesPerformance } from "../constants/sales-performance";
 
 function generateExcel(
   sheetName: string,
@@ -153,11 +154,35 @@ export function downloadTopSellingProducts() {
     },
   ];
 
-  generateExcel(
-    "Top Selling Products",
-    columns,
-    "Top Selling Products Excel"
-  );
+  generateExcel("Top Selling Products", columns, "Top Selling Products Excel");
 }
 
+export function downloadSalesPerformance() {
+  const columns: IJsonSheet[] = [
+    {
+      sheet: "Sales Performance",
+      columns: [
+        { label: "ID", value: "id" },
+        {
+          label: "Hour",
+          value: (row) =>
+            new Date(row.hour as string).toLocaleTimeString([], {
+              hour: "2-digit",
+              minute: "2-digit",
+            }),
+        },
+        { label: "Product", value: "product" },
+        { label: "Units Sold", value: "amount" },
+        { label: "Total Revenue ($)", value: "total" },
+        { label: "Payment Method", value: "payment_method" },
+        {
+          label: "Date of Sale",
+          value: (row) => new Date(row.date as string).toLocaleDateString(),
+        },
+      ],
+      content: salesPerformance,
+    },
+  ];
 
+  generateExcel("Sales Performance Report", columns, "Sales_Performance_Excel");
+}

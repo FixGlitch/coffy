@@ -32,14 +32,14 @@ import {
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { downloadTopSellingProducts } from "@/features/dashboard/libs/xlsx";
+import { downloadSalesPerformance } from "@/features/dashboard/libs/xlsx";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
 }
 
-const TopSellingProductsTable = <TData, TValue>({
+const SalesPerformaceTable = <TData, TValue>({
   columns,
   data,
 }: DataTableProps<TData, TValue>) => {
@@ -81,11 +81,13 @@ const TopSellingProductsTable = <TData, TValue>({
       <div className="rounded-t-md border-t border-x">
         <div className="flex flex-wrap md:flex-row justify-between items-center px-2 border-b">
           <Input
-            placeholder="Filter by name"
-            value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
+            placeholder="Filter by product"
+            value={
+              (table.getColumn("product")?.getFilterValue() as string) ?? ""
+            }
             onChange={(event) => {
               const value = event.target.value;
-              table.getColumn("name")?.setFilterValue(value);
+              table.getColumn("product")?.setFilterValue(value);
             }}
             className="w-full md:w-60 border placeholder:text-gray my-4 md:mr-auto"
           />
@@ -118,10 +120,7 @@ const TopSellingProductsTable = <TData, TValue>({
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Button
-              onClick={() => downloadTopSellingProducts()}
-              className="my-4"
-            >
+            <Button onClick={() => downloadSalesPerformance()} className="my-4">
               Export to Excel
             </Button>
           </div>
@@ -234,4 +233,4 @@ const TopSellingProductsTable = <TData, TValue>({
   );
 };
 
-export default TopSellingProductsTable;
+export default SalesPerformaceTable;

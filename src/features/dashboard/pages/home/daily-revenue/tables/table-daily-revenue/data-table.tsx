@@ -21,7 +21,6 @@ import {
   Table,
   TableBody,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
@@ -79,9 +78,6 @@ const DailyRevenueTable = <TData, TValue>({
 
   return (
     <div>
-      <h3 className="text-lg font-semibold border-t border-x w-fit p-2 rounded-t-md rounded-l-md">
-        Daily Revenue
-      </h3>
       <div className="rounded-t-md border-t border-x">
         <div className="flex flex-wrap md:flex-row justify-between items-center px-2 border-b">
           <Input
