@@ -6,6 +6,7 @@ import Loader from "@/components/common/Loader";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import "../styles/globals.css";
+import { ThemeProvider } from "@/providers/ThemeProvider";
 
 export default function RootLayout({
   children,
@@ -14,9 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en" className="no-scrollbar">
-      <body className="bg-white dark:bg-black">
+      <body className="bg-white dark:bg-black ">
         <AppProviders>
-          <MainContent>{children}</MainContent>
+          <MainContent>
+            <ThemeProvider>{children}</ThemeProvider>
+          </MainContent>
         </AppProviders>
       </body>
     </html>

@@ -15,7 +15,6 @@ export const useAuth = () => {
     error: null,
   });
 
-  // Listener de cambios en el estado de autenticación
   useEffect(() => {
     const { data: authListener } = supabase.auth.onAuthStateChange(
       async (_event, session: Session | null) => {
@@ -27,7 +26,6 @@ export const useAuth = () => {
       }
     );
 
-    // Verifica el usuario actual al montar el hook
     const fetchUser = async () => {
       try {
         const {
@@ -53,13 +51,11 @@ export const useAuth = () => {
 
     fetchUser();
 
-    // Cleanup: Elimina el listener
     return () => {
-      authListener?.subscription?.unsubscribe(); // Uso de subscription.unsubscribe
+      authListener?.subscription?.unsubscribe(); 
     };
   }, []);
 
-  // Función para iniciar sesión
   const signIn = async (email: string, password: string) => {
     setAuthState((prev) => ({ ...prev, loading: true, error: null }));
     try {
@@ -71,7 +67,7 @@ export const useAuth = () => {
       if (error) throw error;
 
       setAuthState({
-        user: data?.user || null, // Acceso correcto al user
+        user: data?.user || null,
         loading: false,
         error: null,
       });
@@ -84,7 +80,6 @@ export const useAuth = () => {
     }
   };
 
-  // Función para registrarse
   const signUp = async (email: string, password: string) => {
     setAuthState((prev) => ({ ...prev, loading: true, error: null }));
     try {
@@ -96,7 +91,7 @@ export const useAuth = () => {
       if (error) throw error;
 
       setAuthState({
-        user: data?.user || null, // Acceso correcto al user
+        user: data?.user || null,
         loading: false,
         error: null,
       });
@@ -109,7 +104,6 @@ export const useAuth = () => {
     }
   };
 
-  // Función para cerrar sesión
   const signOut = async () => {
     setAuthState((prev) => ({ ...prev, loading: true }));
     try {

@@ -2,11 +2,8 @@ import { inferAsyncReturnType } from "@trpc/server";
 import { CreateNextContextOptions } from "@trpc/server/adapters/next";
 import { supabase } from "./supabase";
 
-// Define the context and auth session
 export const createContext = async (opts: CreateNextContextOptions) => {
   const { req } = opts;
-
-  // Extract the token from the request header
   const token = req.headers.authorization?.split(" ")[1] || null;
 
   let userId: string | null = null;
@@ -27,5 +24,4 @@ export const createContext = async (opts: CreateNextContextOptions) => {
   };
 };
 
-// Infer the type of the context
 export type Context = inferAsyncReturnType<typeof createContext>;

@@ -26,7 +26,7 @@ const BreadcrumbComponent = () => {
           return (
             <BreadcrumbItem key={segmentPath}>
               {isLast ? (
-                <span className="font-semibold text-coffee-400">
+                <span className="font-semibold text-coffee-400 dark:text-coffee-200">
                   {segmentName}
                 </span>
               ) : (

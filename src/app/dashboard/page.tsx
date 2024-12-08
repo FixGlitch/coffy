@@ -1,7 +1,7 @@
-import { redirect } from "next/navigation";
+import HomeDashboard from "@/features/dashboard/pages/overview/HomeDashboard";
 
 const DashboardHome = () => {
-  return redirect("/dashboard/home");
+  return <HomeDashboard />;
 };
 
 export default DashboardHome;

@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Sidebar from "@/features/dashboard/components/Sidebar";
-import Header from "@/features/dashboard/components/Header";
+import Sidebar from "@/features/dashboard/components/sidebar/sidebar";
+import Header from "@/features/dashboard/components/header/Header";
 import BreadcrumbComponent from "@/features/dashboard/components/Breadcrumbs/Breadcrumb";
+import { NuqsAdapter } from "nuqs/adapters/next/app"
 
 export default function RootLayout({
   children,
@@ -18,7 +19,7 @@ export default function RootLayout({
         <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         <main className="p-4 md:p-6 2xl:p-10 overflow-y-auto no-scrollbar">
           <BreadcrumbComponent/>
-          {children}
+          <NuqsAdapter>{children}</NuqsAdapter>
         </main>
       </div>
     </div>
